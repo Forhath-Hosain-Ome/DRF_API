@@ -1,7 +1,7 @@
-from .models import note
+from BaseModel.models import Notes
 from rest_framework import serializers
 
 class NoteSerializers(serializers.ModelSerializer):
     class Meta:
-        model = note
-        fields = ['pk','title','content','created_at']
+        model = Notes
+        fields = '__all__'

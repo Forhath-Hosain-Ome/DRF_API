@@ -28,7 +28,13 @@ INSTALLED_APPS = [
 
     "rest_framework",
 
+ 
+
     'core.apps.CoreConfig',
+    'ViewBasedApi.apps.ViewbasedapiConfig',
+    'BaseModel.apps.BasemodelConfig',
+    'BaseSerializer.apps.BaseserializerConfig',
+    'CLass_Based_Api.apps.ClassbasedapiConfig',
 ]
 
 MIDDLEWARE = [
