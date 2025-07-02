@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'BaseSerializer.apps.BaseserializerConfig',
     'ClassBasedApi.apps.ClassbasedapiConfig',
     'GenericsBasedApi.apps.GenericsbasedapiConfig',
+    'MixinBasedApi.apps.MixinbasedapiConfig',
 ]
 
 MIDDLEWARE = [
