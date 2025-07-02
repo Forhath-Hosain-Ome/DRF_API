@@ -1,2 +1,2 @@
-from .NoteListCreate import ApiFunctionView
-from .NoteEdit import ApiFunctionEdit
+from .NoteListCreateView import ApiFunctionView
+from .NoteEditView import ApiFunctionEdit
