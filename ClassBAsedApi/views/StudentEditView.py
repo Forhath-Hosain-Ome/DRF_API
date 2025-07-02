@@ -11,6 +11,7 @@ class StudentEdit(APIView):
     def get_object(self, pk):
         try:
             student = StudentModels.objects.get(pk = pk)
+            return student
         except StudentModels.DoesNotExist:
             raise Http404
     def get(self, request, pk):
@@ -33,5 +34,7 @@ class StudentEdit(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     def delete(self, request, pk):
         student = self.get_object(pk)
-        student.delete()
+        if student is not None:
+            student.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
         return Response(status=status.HTTP_204_NO_CONTENT)

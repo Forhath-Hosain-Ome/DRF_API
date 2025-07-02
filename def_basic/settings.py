@@ -31,10 +31,11 @@ INSTALLED_APPS = [
  
 
     'core.apps.CoreConfig',
-    'ViewBasedApi.apps.ViewbasedapiConfig',
+    'FunctionBasedApi.apps.FunctionbasedapiConfig',
     'BaseModel.apps.BasemodelConfig',
     'BaseSerializer.apps.BaseserializerConfig',
-    'CLass_Based_Api.apps.ClassbasedapiConfig',
+    'ClassBasedApi.apps.ClassbasedapiConfig',
+    'GenericsBasedApi.apps.GenericsbasedapiConfig',
 ]
 
 MIDDLEWARE = [

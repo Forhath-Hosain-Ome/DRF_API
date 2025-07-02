@@ -1,0 +1,2 @@
+from .GenericsBasedView import TeacherView
+from .GenericsBasedViewEdit import TeacherEdit

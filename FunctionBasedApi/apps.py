@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ClassbasedapiConfig(AppConfig):
+class FunctionbasedapiConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'ClassBasedApi'
+    name = 'FunctionBasedApi'
