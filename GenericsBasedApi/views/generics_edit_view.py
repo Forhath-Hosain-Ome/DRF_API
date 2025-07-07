@@ -1,5 +1,5 @@
-from BaseSerializer.serializer import TeacherSerializers
-from BaseModel.models import Teacher
+from BaseSerializer.serializers import TeacherSerializers
+from BaseModel.models import TeacherModel
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework import status

@@ -1,8 +1,8 @@
 from django.db import models
-from .StudentModel import StudentModels as student
+from .student_model import StudentModels
 
 
-class Notes(models.Model):
+class NotesModel(models.Model):
     title = models.CharField(max_length=20, unique=True)
     content = models.TextField(max_length=99)
     created_at = models.DateTimeField(auto_now=True)

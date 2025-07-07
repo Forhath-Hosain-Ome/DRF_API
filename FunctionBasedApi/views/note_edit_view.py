@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from BaseModel.models import Notes
-from BaseSerializer.serializer import NoteSerializers
+from BaseSerializer.serializers import NoteSerializers
 from rest_framework import status
         
 @api_view(['GET', 'PUT', 'PATCH', 'DELETE'])

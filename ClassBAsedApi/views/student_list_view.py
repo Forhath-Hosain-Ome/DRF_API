@@ -1,17 +1,19 @@
 from rest_framework.decorators import APIView
-from BaseModel.models import StudentModels
-from BaseSerializer.serializer import StudentSerializers
+# from BaseModel.models import StudentModels
+# from BaseSerializer.serializers import StudentSerializer
 from rest_framework.response import Response
 from rest_framework import status
+from core.models.student_model_core import *
+
 
 class StudentView(APIView):
     def get(self, request):
         student = StudentModels.objects.all()
-        serializer = StudentSerializers(student, many = True)
+        serializer = StudentSerializer(student, many = True)
         return Response(serializer.data)
     
     def post(self, request):
-        serializer = StudentSerializers(data = request.data)
+        serializer = StudentSerializer(data = request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)

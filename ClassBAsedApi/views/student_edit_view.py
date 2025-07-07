@@ -1,10 +1,10 @@
 from rest_framework.decorators import APIView
-from BaseModel.models import StudentModels
-from BaseSerializer.serializer import StudentSerializers
+# from BaseModel.models import StudentModels
+# from BaseSerializer.serializers import StudentSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from django.http import Http404
-
+from core.models.student_model_core import *
 
 
 class StudentEdit(APIView):
@@ -16,18 +16,18 @@ class StudentEdit(APIView):
             raise Http404
     def get(self, request, pk):
         student = self.get_object(pk)
-        serializer = StudentSerializers(student)
+        serializer = StudentSerializer(student)
         return Response(serializer.data)
     def put(self, request, pk):
         student = self.get_object(pk)
-        serializer = StudentSerializers(student, data=request.data)
+        serializer = StudentSerializer(student, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     def patch(self, request, pk):
         student = self.get_object(pk)
-        serializer = StudentSerializers(student, data=request.data, partial = True)
+        serializer = StudentSerializer(student, data=request.data, partial = True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)

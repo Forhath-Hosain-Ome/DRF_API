@@ -1,6 +1,6 @@
 from django.db import models
 
-class Teacher(models.Model):
+class TeacherModel(models.Model):
     name = models.CharField()
     teacher_id = models.IntegerField()
     depertment = models.CharField()

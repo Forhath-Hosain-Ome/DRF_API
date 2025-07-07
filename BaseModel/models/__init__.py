@@ -1,3 +1,3 @@
-from .NoteModel import Notes
-from .StudentModel import StudentModels
-from .TeacherModel import Teacher
+from .note_model import NotesModel
+from .student_model import StudentModels
+from .teacher_model import TeacherModel
