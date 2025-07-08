@@ -1,14 +1,13 @@
-from BaseSerializer.serializers import TeacherSerializers
-from BaseModel.models import TeacherModel
+from core.models import TeacherModel
+from core.serializers import TeacherSerializer
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework import status
 
 
 class TeacherEdit(GenericAPIView):
-    queryset = Teacher.objects.get()
-    serializer_class = TeacherSerializers
-
+    queryset = TeacherModel.objects.get()
+    serializer_class = TeacherSerializer
 
     def get(self, request, pk):
         teacher = self.get_object()

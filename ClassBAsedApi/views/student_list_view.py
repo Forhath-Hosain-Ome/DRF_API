@@ -3,7 +3,8 @@ from rest_framework.decorators import APIView
 # from BaseSerializer.serializers import StudentSerializer
 from rest_framework.response import Response
 from rest_framework import status
-from core.models.student_model_core import *
+from core.models import StudentModels
+from core.serializers import StudentSerializer
 
 
 class StudentView(APIView):

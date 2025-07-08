@@ -4,7 +4,8 @@ from rest_framework.decorators import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from django.http import Http404
-from core.models.student_model_core import *
+from core.models import StudentModels
+from core.serializers import StudentSerializer
 
 
 class StudentEdit(APIView):

@@ -1,1 +1,3 @@
-from . import student_model_core
+from BaseModel.models import StudentModels
+from BaseModel.models import NotesModel
+from BaseModel.models import TeacherModel
