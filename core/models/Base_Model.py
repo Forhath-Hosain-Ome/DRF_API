@@ -2,7 +2,7 @@ from django.db import models
 
 class BaseModel(models.Model):
     is_student = models.BooleanField(default=True)
-    is_Coordinator = models.BooleanField(default=True)
+    is_Coordinator = models.BooleanField(default=False)
     is_assistant = models.BooleanField(default=False)
     is_instructors = models.BooleanField(default=False)
     is_active = models.BooleanField(default=False)

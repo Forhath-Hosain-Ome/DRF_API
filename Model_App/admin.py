@@ -1,3 +1,7 @@
 from django.contrib import admin
+from Model_App.models import AccountModel, CourseModel, DepertmentModel, SubjectModel
 
-# Register your models here.
+admin.site.register(AccountModel)
+admin.site.register(CourseModel)
+admin.site.register(DepertmentModel)
+admin.site.register(SubjectModel)
