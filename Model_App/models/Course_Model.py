@@ -16,4 +16,4 @@ class CourseModel(BaseModel):
         db_table = 'CourseModel'
         verbose_name = 'CourseModel'
         verbose_name_plural = 'CourseModels'
-        ordering = ['title', 'Course_Teacher', 'Course_Coordinator', 'Course_Assistant', 'available_sit']
+        ordering = ['title']

@@ -14,4 +14,4 @@ class DepertmentModel(BaseModel):
         db_table = 'DepertmentModel'
         verbose_name = 'DepertmentModel'
         verbose_name_plural = 'DepertmentModels'
-        ordering = ['name', 'Depertment_Head', 'Depertment_Teacher', 'Depertment_Assistant']
+        ordering = ['name']

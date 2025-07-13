@@ -10,4 +10,4 @@ class SubjectModel(BaseModel):
         db_table = 'SubjectModel'
         verbose_name = 'SubjectModel'
         verbose_name_plural = 'SubjectModels'
-        ordering = ['title', 'subject_code', 'Course_Subject']
+        ordering = ['title', 'subject_code']
