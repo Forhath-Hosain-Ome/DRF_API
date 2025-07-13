@@ -1,3 +1,2 @@
-from BaseModel.models import StudentModels
-from BaseModel.models import NotesModel
-from BaseModel.models import TeacherModel
+from .Gender_Choice import GenderChoice
+from .Base_Model import BaseModel

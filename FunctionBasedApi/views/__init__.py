@@ -1,2 +1,0 @@
-from .note_list_create_view import ApiFunctionView
-from .note_edit_view import ApiFunctionEdit
