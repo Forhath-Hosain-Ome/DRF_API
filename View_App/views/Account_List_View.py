@@ -5,10 +5,10 @@ from rest_framework.response import Response
 from rest_framework import status
 
 @api_view(['GET', 'POST'])
-def AccountView(request):
+def AccountListView(request):
     if request.method == 'GET':
-        account = AccountModel.objects.all()
-        serializer = AccountSerializer(account, many = True)
+        model = AccountModel.objects.all()
+        serializer = AccountSerializer(model, many = True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     elif request.method == 'POST':
         serializer = AccountSerializer(data=request.data)

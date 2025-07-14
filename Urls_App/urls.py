@@ -1,5 +1,6 @@
 from django.urls import path
-from View_App.views import AccountView
+from View_App.views import AccountListView, AccountEditView
 urlpatterns = [
-    path('', AccountView),
+    path('', AccountListView),
+    path('<int:pk>/', AccountEditView),
 ]
