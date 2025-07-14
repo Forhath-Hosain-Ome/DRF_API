@@ -1,5 +1,5 @@
 {
-  "name": "Python 3.12 Codespace",
+  "name": "Python 3.13 Codespace",
   "build": {
     "dockerfile": "Dockerfile"
   },

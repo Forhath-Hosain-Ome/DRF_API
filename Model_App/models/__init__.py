@@ -1,4 +1,4 @@
-from core.models import BaseModel, GenderChoice
+from core.models import GenderChoice, TimeStamp, RoleModel, StatusModel
 
 from .Account_Model import AccountModel
 from .Course_Model import CourseModel
