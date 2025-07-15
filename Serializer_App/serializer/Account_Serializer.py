@@ -4,6 +4,6 @@ from Model_App.models import AccountModel
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = AccountModel
-        fields = ['pk','name','phone_number','email']
+        # fields = ['pk','name','phone_number','email']
         # fields = ['name', 'phone_number', 'email']
-        # fields = '__all__'
+        fields = '__all__'

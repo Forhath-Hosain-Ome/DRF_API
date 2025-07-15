@@ -1,1 +1,3 @@
 from .Account_Serializer import AccountSerializer
+from .Course_Serializer import CourseSerializer
+from . Depertment_Serializer import DepertmentSerializer

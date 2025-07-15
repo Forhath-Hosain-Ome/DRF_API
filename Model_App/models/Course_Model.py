@@ -5,8 +5,8 @@ from core.utilities import UploadPath
 class CourseModel(TimeStamp):
     title = models.CharField(max_length=25, unique=True)
     description = models.TextField(max_length=80)
-    profile_image = models.ImageField(upload_to=UploadPath)
-    cover_image = models.ImageField(upload_to=UploadPath)
+    profile_image = models.ImageField(upload_to=UploadPath, null=True, blank=True)
+    cover_image = models.ImageField(upload_to=UploadPath, null=True, blank=True)
     instructors = models.ForeignKey('Model_App.AccountModel', on_delete=models.CASCADE, limit_choices_to = { 'role' : 'instructor' }, related_name='Course_Teacher')
     coordinator = models.OneToOneField('Model_App.AccountModel', on_delete=models.CASCADE, limit_choices_to = { 'role' : 'coordinator' }, related_name='Course_Coordinator')
     assistant = models.ForeignKey('Model_App.AccountModel', on_delete=models.CASCADE, limit_choices_to = { 'role' : 'assistant' }, related_name='Course_Assistant')

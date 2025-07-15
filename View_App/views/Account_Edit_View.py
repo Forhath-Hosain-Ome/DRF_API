@@ -6,22 +6,22 @@ from rest_framework import status
 
 @api_view(['GET', 'PUT', 'PATCH', 'DELETE'])
 def AccountEditView(request, pk):
-    model = AccountModel.objects.get(pk=pk)
+    queryset = AccountModel.objects.get(pk=pk)
     if request.method == 'GET':
-        serializer = AccountSerializer(model)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        serializer_class = AccountSerializer(queryset)
+        return Response(serializer_class.data, status=status.HTTP_200_OK)
     elif request.method == 'PUT':
-        serializer = AccountSerializer(data = request.data, instance = model)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        serializer_class = AccountSerializer(data = request.data, instance = queryset)
+        if serializer_class.is_valid():
+            serializer_class.save()
+            return Response(serializer_class.data, status=status.HTTP_202_ACCEPTED)
+        return Response(serializer_class.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'PATCH':
-        serializer = AccountSerializer(data = request.data, instance = model, partial = True)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        serializer_class = AccountSerializer(data = request.data, instance = queryset, partial = True)
+        if serializer_class.is_valid():
+            serializer_class.save()
+            return Response(serializer_class.data, status=status.HTTP_202_ACCEPTED)
+        return Response(serializer_class.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'DELETE':
-        model.delete()
+        queryset.delete()
         return Response(status=status.HTTP_410_GONE)
