@@ -5,3 +5,4 @@ from .Course_List_View import CourseListView
 from .Course_Edit_View import CourseEditView
 
 from .Depertment_List_View import DepertmentListView
+from .Depertment_Edit_View import DepertmentEditView

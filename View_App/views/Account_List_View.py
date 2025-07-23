@@ -4,6 +4,8 @@ from Serializer_App.serializer import AccountSerializer
 from rest_framework.response import Response
 from rest_framework import status
 
+
+
 @api_view(['GET', 'POST'])
 def AccountListView(request):
     if request.method == 'GET':
