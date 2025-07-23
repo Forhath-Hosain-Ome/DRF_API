@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'View_App.apps.ViewAppConfig',
 
     'rest_framework',
-    'rest_framework.authtoken',
+    # 'rest_framework.authtoken',
     'rest_framework_simplejwt',
 ]
 
