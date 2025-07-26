@@ -80,16 +80,21 @@ WSGI_APPLICATION = 'root.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+import os
+import dj_database_url
 
 DATABASES = {
-        'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'drf_api',
-        'USER': 'drf_admin',
-        'PASSWORD': '0000',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+        'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL')
+    )
+    #     'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'drf_api',
+    #     'USER': 'drf_admin',
+    #     'PASSWORD': '0000',
+    #     'HOST': 'localhost',
+    #     'PORT': '5432',
+    # }
 }
 
 STATIC_URL = '/static/'
