@@ -58,6 +58,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://drfapi-production-6698.up.railway.app'
+]
+
 ROOT_URLCONF = 'root.urls'
 
 TEMPLATES = [
@@ -84,17 +88,21 @@ import os
 import dj_database_url
 
 DATABASES = {
-        'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL')
-    )
-    #     'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'drf_api',
-    #     'USER': 'drf_admin',
-    #     'PASSWORD': '0000',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432',
-    # }
+    #     "default": {
+    #     "ENGINE": "django.db.backends.sqlite3",
+    #     "NAME": BASE_DIR / "db.sqlite3",
+    # }# this is default sqlite3 database
+    #     'default': dj_database_url.config(
+    #     default=os.getenv('DATABASE_URL')
+    # )# this is default railway postgres database
+        'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'drf_api',
+        'USER': 'drf_admin',
+        'PASSWORD': '0000',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }# this is default local postgres database
 }
 
 STATIC_URL = '/static/'

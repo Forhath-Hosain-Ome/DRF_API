@@ -9,11 +9,11 @@ class AccountModel(TimeStamp):
     phone_number = models.IntegerField(unique=True, blank=True, null=True)
     email = models.EmailField(unique=True, blank=True, null=True)
     address = models.TextField(max_length=30, null=True)
-    gender = models.CharField(choices=GenderChoice.choices, default='', null=True)
+    gender = models.CharField(max_length=10, choices=GenderChoice.choices, default='', null=True)
     profile_image = models.ImageField(upload_to=UploadPath, null=True, blank=True)
     fathers_name = models.CharField(max_length=20, null=True, blank=True)
     mothers_name = models.CharField(max_length=20, null=True, blank=True)
-    role = models.CharField(choices=RoleModel.choices, default=RoleModel.STUDENT)
+    role = models.CharField(max_length=20, choices=RoleModel.choices, default=RoleModel.STUDENT)
 
     class Meta:
         db_table = 'AccountModel'
