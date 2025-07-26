@@ -92,8 +92,7 @@ DATABASES = {
     #     "ENGINE": "django.db.backends.sqlite3",
     #     "NAME": BASE_DIR / "db.sqlite3",
     # }# this is default sqlite3 database
-        'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL')
+        'default': dj_database_url.config(default=os.getenv('DATABASE_URL')
     )# this is default railway postgres databases
         # 'default': {
         # 'ENGINE': 'django.db.backends.postgresql',
@@ -103,7 +102,7 @@ DATABASES = {
         # 'HOST': 'localhost',
         # 'PORT': '5432',
     }# this is default local postgres database
-}
+
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
